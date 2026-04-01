@@ -1,0 +1,58 @@
+﻿@model List<Country>
+<!--新增TempData，只會渲染一次-->
+<partial name="_Notification" />
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                國家名單
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Country" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> 新增國家隊伍
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    隊伍名稱
+                </th>
+                <th>
+                    Power Rank
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(u => u.Rank))
+            {
+                <tr>
+                    <td>
+                        @obj.Name
+                    </td>
+                    <td>
+                        @obj.Rank
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <!--這裡要傳入id的參數，才能指定要編輯的資料-->
+                            <a asp-controller="Country" asp-action="Edit" asp-route-id="@obj.CountryID"
+                            class=" btn btn-primary mx-2">
+                            <i class="bi bi-pencil-square"></i>編輯
+                        </a>
+                            <!--這裡要傳入id的參數，才能指定要刪除的資料-->
+                            <a asp-controller="Country" asp-action="Delete" asp-route-id="@obj.CountryID"
+                               class=" btn btn-danger mx-2">
+                                <i class="bi bi-trash-fill"></i>刪除
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

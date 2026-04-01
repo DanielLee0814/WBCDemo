@@ -1,0 +1,44 @@
+﻿@model List<Players>
+<!--新增TempData，只會渲染一次-->
+<partial name="_Notification" />
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                球員資料
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Player" asp-action="Upsert" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> 新增球員
+            </a>
+        </div>
+    </div>
+
+    <table id="tblData" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    球員名稱
+                </th>
+                <th>
+                    守備位置
+                </th>
+                <th>
+                    年紀
+                </th>
+                <th>
+                    概述
+                </th>
+                <th>
+                    所屬隊伍
+                </th>
+            </tr>
+        </thead>
+       
+    </table>
+</div>
+
+@section Scripts{
+    <script src ="~/js/player.js"></script>
+}

@@ -1,0 +1,126 @@
+﻿@model PlayerVM
+
+<form method="post" enctype="multipart/form-data">
+    <input asp-for ="Players.PlayerID" hidden />
+    <input asp-for ="Players.ImageURL" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">@(Model.Players.PlayerID != 0 ? "編輯" : "新增")產品</h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Players.PlayerName" class="p-0"></label>
+            <input asp-for="Players.PlayerName" class="form-control" />
+           @*  錯誤提示，檢核 *@
+            <span asp-validation-for="Players.PlayerName" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Players.PlayAgo" class="p-0"></label>
+            <input asp-for="Players.PlayAgo" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="Players.PlayAgo" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Players.Position" class="p-0"></label>
+            <input asp-for="Players.Position" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="Players.Position" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Players.PlayerDescription" class="p-0"></label>
+            <input asp-for="Players.PlayerDescription" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="Players.PlayerDescription" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Players.ImageURL" class="p-0"></label>
+            <input type="file" name="file"  asp-for="Players.ImageURL" class="form-control" />          
+        </div>
+        <!--使用viewbag-->
+       @*  <div class="mb-3 row p-1">
+            <label asp-for="CountryID" class="p-0"></label>
+            <select asp-for="CountryID" asp-items="ViewBag.CountryList" class="form-select">
+            <option disabled selected>選擇國家</option>
+            </select>
+            錯誤提示，檢核 
+            <span asp-validation-for="CountryID" class="text-danger"></span>
+        </div> *@
+        <!--使用viewdata-->
+       @* <div class="mb-3 row p-1">
+            <label asp-for="CountryID" class="p-0"></label>
+            <select asp-for="CountryID" asp-items="@(ViewData["CountryList"] as IEnumerable<SelectListItem> ) " class ="form-select">
+            <option disabled selected>選擇國家</option>
+            </select>
+            <span asp-validation-for="CountryID" class="text-danger"></span>
+        </div>  *@
+        <div class="mb-3 row p-1">
+            <label asp-for="Players.CountryID" class="p-0"></label>
+            <select asp-for="Players.CountryID" asp-items="@Model.CountryList" class="form-select">
+                <option disabled selected>選擇國家</option>
+            </select>
+            <span asp-validation-for="Players.CountryID" class="text-danger"></span>
+        </div>  
+        <hr />
+        <h4>球員數據</h4>
+        <div>
+            <label>打擊率</label>
+            <input asp-for="PlayerStats.AVG" class="form-control" />
+        </div>
+
+        <div>
+            <label>全壘打</label>
+            <input asp-for="PlayerStats.HR" class="form-control" />
+        </div>
+
+        <div>
+            <label>打點</label>
+            <input asp-for="PlayerStats.RBI" class="form-control" />
+        </div>
+       
+        <div>
+            <label>OPS</label>
+            <input asp-for="PlayerStats.OPS" class="form-control" />
+        </div>
+
+
+        @if (!string.IsNullOrEmpty(Model.Players.ImageURL))
+        {
+            <img src="@Model.Players.ImageURL"
+                 class="img-fluid rounded shadow"
+                 style="max-height:400px;" />
+        }
+        else
+        {
+            <img src="https://via.placeholder.com/300x400?text=No+Image"
+                 class="img-fluid rounded shadow"
+                 style="max-height:400px;" />
+        }
+
+       
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                @if (Model.Players.PlayerID != 0)
+                    {
+                    <button type="submit" class="btn btn-primary form-control">編輯</button>
+                    }
+                    else
+                    {
+                    <button type="submit" class="btn btn-primary form-control">新增</button>
+                    }                  
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Player" asp-action="Index" class="btn btn-secondary border form-control">
+                    返回
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--從_ValidationSciptsPartial.cshtml可以直接在前端就擋掉，不會進到controller才驗證-->
+@section Scripts{
+    @{
+        <partial name ="_ValidationScriptsPartial" />
+    }
+}
