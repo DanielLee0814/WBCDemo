@@ -32,6 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="User" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="User" asp-controller="Game" asp-action="Index">購票資訊</a>
+                        </li>
                         <!--只有角色為admin才能做內容管理-->
                         @if (User.IsInRole(SD.Role_Admin))
                             {
@@ -42,7 +45,8 @@
                             <div class=" dropdown-menu">
                                 <a class=" dropdown-item" asp-area="Admin" asp-controller="Country" asp-action="Index">國家名單</a>
                                     <div class="dropdown-divider"></div>
-                                <a class=" dropdown-item text-dark" asp-area="Admin" asp-controller="Player" asp-action="Index">球員名單</a>                               
+                                <a class=" dropdown-item text-dark" asp-area="Admin" asp-controller="Player" asp-action="Index">球員名單</a>                                   <div class="dropdown-divider"></div>
+                                 <a class=" dropdown-item text-dark" asp-area="Admin" asp-controller="Game" asp-action="Index">場次資料</a>      
                                 </div>
                                 
                             </li>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Games>
+
+<div class="row pb-3">
+    @foreach (var game in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="row p-2">
+                <div class="col-12 p-3" style="border:1px solid #008cba; border-radius:5px">
+
+                    <div class="card-body">
+                        <div class="p-1">
+                            <p class="card-title h5 text-primary">@game.Name</p>
+                            <p class="text-secondary">
+                                @game.EventDate.ToString("yyyy/MM/dd")
+                            </p>
+                        </div>
+
+                        <div class="p-1">
+                            <p>地點：<b>@game.Location</b></p>
+                            <p>票價：<b>@game.Price 元</b></p>
+                            <p>剩餘座位：<b>@game.AvailableSeats</b></p>
+                        </div>
+                        
+                        <div class="p-2">
+                            <a asp-action="Details"
+                                   asp-route-gameId="@game.GameId"
+                                   class="btn btn-primary w-100">
+                                查看詳情
+                            </a>
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,63 @@
+﻿@model Games
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">新增場次</h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" class="form-control" />
+           @*  錯誤提示，檢核 *@
+           <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="EventDate" class="p-0"></label>
+            <input asp-for="EventDate" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="EventDate" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Location" class="p-0"></label>
+            <input asp-for="Location" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Price" class="p-0"></label>
+            <input asp-for="Price" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="TotalSeats" class="p-0"></label>
+            <input asp-for="TotalSeats" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="TotalSeats" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="AvailableSeats" class="p-0"></label>
+            <input asp-for="AvailableSeats" class="form-control" />
+            @*  錯誤提示，檢核 *@
+            <span asp-validation-for="AvailableSeats" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">新增</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Game" asp-action="Index" class="btn btn-secondary border form-control">
+                    返回
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--從_ValidationSciptsPartial.cshtml可以直接在前端就擋掉，不會進到controller才驗證-->
+@section Scripts{
+    @{
+        <partial name ="_ValidationScriptsPartial" />
+    }
+}

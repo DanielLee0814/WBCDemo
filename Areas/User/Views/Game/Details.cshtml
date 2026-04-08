@@ -1,0 +1,40 @@
+﻿@model ShoppingCart
+<form method="post">
+<input hidden asp-for="GameId" />
+    <input hidden asp-for="Count" />
+<div class="container mt-4">
+    <div class="card p-4">
+
+        <h2 class="text-primary">@Model.Games.Name</h2>
+
+        <hr />
+
+        <p><b>時間：</b>@Model.Games.EventDate.ToString("yyyy/MM/dd HH:mm")</p>
+        <p><b>地點：</b>@Model.Games.Location</p>
+        <p><b>票價：</b>@Model.Games.Price 元</p>
+
+        <p>
+            <b>剩餘座位：</b>
+            @if (Model.Games.AvailableSeats > 0)
+            {
+                <span class="text-success">@Model.Games.AvailableSeats</span>
+            }
+            else
+            {
+                <span class="text-danger">已售完</span>
+            }
+        </p>
+
+            <div class="bg-white mt-5 mb-3">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 pb-1">
+                        <a class="btn btn-light form-control text-primary d-flex justify-content-center align-items-center" style="height:50px;" asp-action="Index">返回列表</a>
+                    </div>
+                    <div class="col-12 col-md-6 pb-1">
+                        <button type="submit" value="Add to Cart" class="btn btn-primary form-control" style="height:50px;">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</form>
