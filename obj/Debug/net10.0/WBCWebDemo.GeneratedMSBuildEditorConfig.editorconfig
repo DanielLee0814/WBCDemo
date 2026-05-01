@@ -246,6 +246,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Daniel.LAPTOP-3B7QPQH4/source/repos/WBCWebDemo/WBCWebDemo/Areas/User/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDYXJ0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Daniel.LAPTOP-3B7QPQH4/source/repos/WBCWebDemo/WBCWebDemo/Areas/User/Views/Cart/Summary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDYXJ0XFN1bW1hcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Daniel.LAPTOP-3B7QPQH4/source/repos/WBCWebDemo/WBCWebDemo/Areas/User/Views/Game/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xHYW1lXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
