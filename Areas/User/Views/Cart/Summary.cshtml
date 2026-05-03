@@ -1,4 +1,5 @@
-﻿<form method="post">
+﻿@model ShoppingCartVM
+<form method="post">
 	<br />
 	<div class="container">
 		<div class="card">
@@ -27,7 +28,8 @@
 									<label>姓名 Name</label>
 								</div>
 								<div class="col-9">
-									<input class="form-control" />
+									<input asp-for="OrderHeader.Name" class="form-control" />
+									<span asp-validation-for="OrderHeader.Name" class="text-danger"></span>
 								</div>
 							</div>
 							<div class="row my-1">
@@ -35,7 +37,8 @@
 									<label>手機 Phone</label>
 								</div>
 								<div class="col-9">
-									<input class="form-control" />
+									<input asp-for="OrderHeader.PhoneNumber" class="form-control" />
+									<span asp-validation-for="OrderHeader.PhoneNumber" class="text-danger"></span>
 								</div>
 							</div>
 							<div class="row my-1">
@@ -43,7 +46,8 @@
 									<label>地址 Street Address</label>
 								</div>
 								<div class="col-9">
-									<input class="form-control" />
+									<input asp-for="OrderHeader.Address" class="form-control" />
+									<span asp-validation-for="OrderHeader.Address" class="text-danger"></span>
 								</div>
 							</div>
 						</div>
@@ -52,18 +56,23 @@
 								<span class="text-info">訂單總計 Order Summary:</span>
 							</h4>
 							<ul class="list-group mb-3">
+								@foreach(var details in Model.ShoppingCartList)
+									{
+									<li class="list-group-item d-flex justify-content-between">
+										<div>
+											<h6 class="my-0">@details.Games.Name</h6>
+											<small class="text-muted">數量 : @details.Count</small>
+											<br>
 
-								<li class="list-group-item d-flex justify-content-between">
-									<div>
-										<h6 class="my-0">名稱 Title</h6>
-										<small class="text-muted">數量 : Count</small>
-									</div>
-									<span class="text-muted">$$$ </span>
-								</li>
+										</div>
+										<span class="text-muted"> @((details.Games.Price * details.Count).ToString("c"))</span>
+									</li>
+									}
+									
 
 								<li class="list-group-item d-flex justify-content-between bg-light">
 									<small class="text-info">總計 Total (TWD)</small>
-									<strong class="text-info">$$$</strong>
+									<strong class="text-info">@Model.OrderHeader.OrderTotal.ToString("c")</strong>
 								</li>
 							</ul>
 						</div>

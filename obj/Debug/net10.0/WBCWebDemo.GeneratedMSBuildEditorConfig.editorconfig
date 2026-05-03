@@ -250,6 +250,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDYXJ0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Daniel.LAPTOP-3B7QPQH4/source/repos/WBCWebDemo/WBCWebDemo/Areas/User/Views/Cart/OrderConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDYXJ0XE9yZGVyQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Daniel.LAPTOP-3B7QPQH4/source/repos/WBCWebDemo/WBCWebDemo/Areas/User/Views/Cart/Summary.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDYXJ0XFN1bW1hcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
