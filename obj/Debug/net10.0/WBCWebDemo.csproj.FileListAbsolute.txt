@@ -440,3 +440,4 @@ C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\obj\Debug\net
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\obj\Debug\net10.0\WBCWebDemo.sourcelink.json
+C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\obj\Debug\net10.0\compressed\op0bfb8vqh-{0}-vuv4b1aaef-vuv4b1aaef.gz

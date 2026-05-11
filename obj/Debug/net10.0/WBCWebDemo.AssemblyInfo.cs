@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WBCWebDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c1fc41f5fae3c87352139a51d98a40db90966ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a6e0c973999265a413a67112e8811e62ea2bedf")]
 [assembly: System.Reflection.AssemblyProductAttribute("WBCWebDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WBCWebDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

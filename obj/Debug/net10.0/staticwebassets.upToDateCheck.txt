@@ -45,6 +45,7 @@ C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\b
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\js\order.js
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\favicon.ico
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
@@ -65,9 +66,11 @@ C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\j
 C:\Users\Daniel.LAPTOP-3B7QPQH4\source\repos\WBCWebDemo\WBCWebDemo\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\player\2b3706ff-eccd-4f5c-bdd3-e189f9a6f148.png
 wwwroot\images\player\c8de0a4e-9a72-49e0-97f9-cf98479a24ad.jpg
 wwwroot\images\player\d437fb2c-5284-45b1-abdd-e6e63ffaab4b.webp
 wwwroot\images\player\fd9d131b-be5a-487d-a52d-8dc10e57a2af.webp
+wwwroot\js\order.js
 wwwroot\js\player.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE
